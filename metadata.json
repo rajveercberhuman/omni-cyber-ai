@@ -1,0 +1,12 @@
+{
+  "name": "SYNAPSE // Omni-Vision Cyber AI",
+  "description": "Futuristic geometric neon HUD & cybernetic companion with biometric passcode access, screen/web context deconstruction (history, present, tech lineage), and project innovation ideator.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "display-capture"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

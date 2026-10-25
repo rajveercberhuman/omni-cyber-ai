@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-orbitron: 'Orbitron', monospace, sans-serif;
+    --font-rajdhani: 'Rajdhani', sans-serif;
+    --font-mono: 'Share Tech Mono', 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-rajdhani);
+    background-color: #04060a;
+    color: #e2e8f0;
+  }
+}
+
+.font-cyber {
+  font-family: var(--font-orbitron);
+}
+
+.font-tech {
+  font-family: var(--font-rajdhani);
+}
+
+.font-terminal {
+  font-family: var(--font-mono);
+}
+
+/* Futuristic geometric chamfers */
+.clip-chamfer-sm {
+  clip-path: polygon(
+    0 8px, 8px 0,
+    calc(100% - 8px) 0, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 0 calc(100% - 8px)
+  );
+}
+
+.clip-chamfer-md {
+  clip-path: polygon(
+    0 16px, 16px 0,
+    calc(100% - 16px) 0, 100% 16px,
+    100% calc(100% - 16px), calc(100% - 16px) 100%,
+    16px 100%, 0 calc(100% - 16px)
+  );
+}
+
+.clip-angle-tr {
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.clip-angle-bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+.clip-corner-cut {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+/* Neon glow effects */
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.45), inset 0 0 10px rgba(6, 182, 212, 0.2);
+}
+
+.glow-magenta {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.45), inset 0 0 10px rgba(236, 72, 153, 0.2);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.45), inset 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+.text-glow-magenta {
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.4);
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.8), 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+/* Scanlines and grid overlay */
+.bg-cyber-grid {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-cyber-hex {
+  background-image: radial-gradient(rgba(6, 182, 212, 0.12) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Custom cyber scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #060b13;
+}
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+  box-shadow: 0 0 8px #0ea5e9;
+}
